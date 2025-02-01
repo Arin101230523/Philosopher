@@ -1,71 +1,74 @@
-# helloworld README
+# Deep Seek Chat Extension
 
-This is the README for your extension "helloworld". After writing up a brief description, we recommend including the following sections.
+Deep Seek Chat is a VS Code extension that allows you to interact with a chatbot directly from your editor. The chatbot uses the `ollama` library to provide responses.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Chat with a helpful assistant directly from VS Code.
+- Real-time streaming responses.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [Ollama](https://www.npmjs.com/package/ollama) library
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. **Clone the repository:**
 
-For example:
+    ```sh
+    git clone https://github.com/Arin101230523/Philosopher
+    cd deep-seek-chat
+    ```
 
-This extension contributes the following settings:
+2. **Install dependencies:**
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+    ```sh
+    npm install
+    ```
 
-## Known Issues
+3. **Install Ollama:**
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+    ```sh
+    npm install ollama
+    ```
 
-## Release Notes
+## Usage
 
-Users appreciate release notes as you update your extension.
+1. **Open the project in VS Code:**
 
-### 1.0.0
+    ```sh
+    code .
+    ```
 
-Initial release of ...
+2. **Compile the TypeScript code:**
 
-### 1.0.1
+    ```sh
+    npm run compile
+    ```
 
-Fixed issue #.
+3. **Run the extension:**
 
-### 1.1.0
+    - Press `F5` to open a new VS Code window with the extension loaded.
 
-Added features X, Y, and Z.
+4. **Start Deep Seek Chat:**
 
----
+    - Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+    - Type `Deep Seek Chat` and select `Start Deep Seek Chat`.
 
-## Following extension guidelines
+5. **Interact with the chatbot:**
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+    - Type your question in the text area and click the `Ask` button.
+    - The response will be displayed in the `response` section.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## Configuration
 
-## Working with Markdown
+The chatbot uses the `deepseek-r1:1.5b` model by default. You can change the system prompt or model by modifying the `extension.ts` file.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Contributing
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+Contributions are welcome! Please open an issue or submit a pull request.
 
-## For more information
+## License
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project is licensed under the MIT License.
