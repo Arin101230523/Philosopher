@@ -26,7 +26,10 @@ export function activate(context: vscode.ExtensionContext) {
 				try {
 					const streamResponse = await ollama.chat({
 						model: 'deepseek-r1:1.5b',
-						messages: [{ role: 'user', content: userPrompt }],
+						messages: [
+							{ role: 'system', content: 'You are a VS code extension that allows users to connect with the greatest philosophers in history, all of your answers should be as cryptic and like a riddle as possible.' },
+							{ role: 'user', content: userPrompt }
+						],
 						stream: true
 					});
 
